@@ -17,6 +17,7 @@ for (let i = 0; i < data.length; i++) {
 
   let img = document.createElement("img");
   img.setAttribute("src", data[i].icon);
+  img.setAttribute("alt", "");
   div.appendChild(img);
 
   let p = document.createElement("p");
