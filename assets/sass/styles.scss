@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+@import "variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+body {
+  margin: 0 auto;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-container {
+  background-color: white;
+  display: grid;
+  max-width: 375px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+.main-card {
+  background: $background;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+  padding: 20px 0 40px;
+  z-index: 1;
+  box-shadow: 0px 6px 10px 3px $paleBlue;
+  .circle-button {
+    background: $circleBg;
+    border-radius: 50%;
+    display: flex;
+    place-content: center;
+    width: 140px;
+    height: 140px;
+    margin: 10px auto 30px;
+    overflow: hidden;
+  }
+  .score-container {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    p:first-of-type {
+      font-size: 48px;
+      font-weight: 800;
+      color: $white;
+    }
+    p:last-of-type {
+      color: $paleBlue;
+      opacity: 0.3;
+    }
+  }
+  h1 {
+    color: $paleBlue;
+    opacity: 0.6;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: $white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p:last-of-type {
+    margin: 0 40px;
+    color: $paleBlue;
+    opacity: 0.6;
+  }
+}
+.info-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 30px;
+  text-align: left;
+  h2 {
+    font-size: 18px;
+    color: $darkGreyBlue;
+  }
+  .summary-categories {
+    padding-top: 5px;
+  }
+  .category {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    place-items: center;
+    img {
+      margin-right: 15px;
+    }
+    p:first-of-type {
+      flex-grow: 2;
+      font-weight: 700;
+    }
+  }
+  .reaction {
+    background-color: $reactionBg;
+    color: $reactionColor;
+  }
+  .memory {
+    background-color: $memoryBg;
+    color: $memoryColor;
+  }
+  .verbal {
+    background-color: $verbalBg;
+    color: $verbalColor;
+  }
+  .visual {
+    background-color: $visualBg;
+    color: $visualColor;
+  }
+  .score {
+    color: grey;
+    font-weight: 700;
+    strong {
+      color: $darkGreyBlue;
+      font-weight: 800;
+    }
+  }
+  .button {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: $darkGreyBlue;
+    color: white;
+    border-radius: 30px;
+    padding: 15px 50px;
+    margin-top: 25px;
+    font-weight: 800;
+  }
+  .button:hover {
+    background: $background;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 744px) {
+  .card-container {
+    box-shadow: 0px 5px 15px 5px $paleBlue;
+  }
+}
+
+@media screen and (min-width: 745px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  main {
+    height: 100%;
+    margin: auto;
+  }
+  .card-container {
+    max-width: 735px;
+    height: 500px;
+    grid-template-columns: 365px 375px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px 15px $paleBlue;
+  }
+  .main-card {
+    border-radius: 30px;
+    padding: 40px 30px 50px;
+    box-shadow: 6px 0px 10px 3px $paleBlue;
+    .circle-button {
+      place-content: center;
+      width: 200px;
+      height: 200px;
+      margin: 10px auto 30px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: $white;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .score-container {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      p:first-of-type {
+        font-size: 68px;
+        font-weight: 800;
+        color: $white;
+      }
+      p:last-of-type {
+        color: $paleBlue;
+        opacity: 0.3;
+      }
+    }
+    p:last-of-type {
+      margin: 0 40px;
+      color: $paleBlue;
+      text-align: center;
+      opacity: 0.6;
+    }
+  }
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 45px;
+    text-align: left;
+    h2 {
+      font-size: 23px;
+      color: $darkGreyBlue;
+    }
+    .summary-categories {
+      padding-top: 15px;
+    }
+    .button {
+      margin-top: 45px;
+    }
+  }
+  footer {
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    position: fixed;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
