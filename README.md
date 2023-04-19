@@ -50,6 +50,7 @@ Users should be able to:
 ### What I learned
 
 I learned how to manipulate DOM elements using Javascript. At first I hard coded everything but then I wanted to challenge myself and use the provided JSON file to generate the appropriate HTML.
+
 **The categories and their scores don't show up in firefox due to Firefox not supporting import assertions. I would like to look into other ways to do this while maintaining compatibility.**
 
 ### Continued development
