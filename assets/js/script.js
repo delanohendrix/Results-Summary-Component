@@ -1,4 +1,4 @@
-fetch("../../data.json")
+fetch("https://raw.githubusercontent.com/delanohendrix/Results-Summary-Component/master/data.json")
   .then((response) => response.json())
   .then((data) => genScores(data));
 
